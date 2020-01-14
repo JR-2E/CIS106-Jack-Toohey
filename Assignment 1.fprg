@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Jack"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-13 09:35:33 PM"/>
+        <attribute name="created" value="SmFjaztKQUNLMkU7MjAyMC0wMS0xMzswODoxMjoxNCBQTTsyMDQ2"/>
+        <attribute name="edited" value="SmFjaztKQUNLMkU7MjAyMC0wMS0xMzswOTozNTozMyBQTTszOzIxNjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;open cupboard&quot;" newline="True"/>
+            <output expression="&quot;remove bag of bread from cupboard&quot;" newline="True"/>
+            <output expression="&quot;turn around to face island counter&quot;" newline="True"/>
+            <output expression="&quot;place bag of bread on island counter&quot;" newline="True"/>
+            <output expression="&quot;turn around to face cupboard&quot;" newline="True"/>
+            <output expression="&quot;remove jar of peanut butter from cupboard&quot;" newline="True"/>
+            <output expression="&quot;turn around to face island counter&quot;" newline="True"/>
+            <output expression="&quot;place jar of peanut butter on island counter&quot;" newline="True"/>
+            <output expression="&quot;turn around to face cupboard&quot;" newline="True"/>
+            <output expression="&quot;close cupboard&quot;" newline="True"/>
+            <output expression="&quot;turn around to face fridge&quot;" newline="True"/>
+            <output expression="&quot;approach refrigerator&quot;" newline="True"/>
+            <output expression="&quot;walk to fridge&quot;" newline="True"/>
+            <output expression="&quot;open refrigerator doors&quot;" newline="True"/>
+            <output expression="&quot;remove jelly from fridge&quot;" newline="True"/>
+            <output expression="&quot;close fridge doors&quot;" newline="True"/>
+            <output expression="&quot;turn around to face island counter&quot;" newline="True"/>
+            <output expression="&quot;place jelly on island counter&quot;" newline="True"/>
+            <output expression="&quot;turn towards dishware cabinet&quot;" newline="True"/>
+            <output expression="&quot;approach dishware cabinet&quot;" newline="True"/>
+            <output expression="&quot;open dishware cabinet&quot;" newline="True"/>
+            <output expression="&quot;remove plate from stack of plates&quot;" newline="True"/>
+            <output expression="&quot;close dishware cabinet&quot;" newline="True"/>
+            <output expression="&quot;turn around to face silverware drawer&quot;" newline="True"/>
+            <output expression="&quot;remove a butter knife from silverware drawer&quot;" newline="True"/>
+            <output expression="&quot;close silverware drawer&quot;" newline="True"/>
+            <output expression="&quot;turn around to face island counter&quot;" newline="True"/>
+            <output expression="&quot;place plate on island counter&quot;" newline="True"/>
+            <output expression="&quot;pick up bag of bread&quot;" newline="True"/>
+            <output expression="&quot;remove twist tie from bag of bread&quot;" newline="True"/>
+            <output expression="&quot;place bag of bread on island counter&quot;" newline="True"/>
+            <output expression="&quot;open peanut butter jar&quot;" newline="True"/>
+            <output expression="&quot;grab knife off of island counter&quot;" newline="True"/>
+            <output expression="&quot;scoop peanut butter with knife&quot;" newline="True"/>
+            <output expression="&quot;put peanut butter jar down on island counter&quot;" newline="False"/>
+            <output expression="&quot;pick up slice of bread A&quot;" newline="True"/>
+            <output expression="&quot;spread peanut butter on slice of bread A&quot;" newline="True"/>
+            <output expression="&quot;place slice of bread A on plate&quot;" newline="True"/>
+            <output expression="&quot;open jelly jar&quot;" newline="True"/>
+            <output expression="&quot;scoop jelly with knife&quot;" newline="True"/>
+            <output expression="&quot;pick up slide of bread B&quot;" newline="True"/>
+            <output expression="&quot;spread jelly on slice of bread B&quot;" newline="True"/>
+            <output expression="&quot;put butter knife down on plate&quot;" newline="True"/>
+            <output expression="&quot;pick up slice of bread A&quot;" newline="True"/>
+            <output expression="&quot;put slices of bread together, peanut butter facing meeting jelly&quot;" newline="True"/>
+            <output expression="&quot;place combined slices of bread, peanut butter, and jelly on plate (now referred to as sandwich)&quot;" newline="True"/>
+            <output expression="&quot;pick up butter knife&quot;" newline="True"/>
+            <output expression="&quot;hold sandwich down on plate&quot;" newline="True"/>
+            <output expression="&quot;cut sandwich in half&quot;" newline="True"/>
+            <output expression="&quot;turn around to face sink&quot;" newline="True"/>
+            <output expression="&quot;approach sink&quot;" newline="True"/>
+            <output expression="&quot;turn on sink&quot;" newline="True"/>
+            <output expression="&quot;rinse off butter knife&quot;" newline="True"/>
+            <output expression="&quot;place butter knife in sink&quot;" newline="True"/>
+            <output expression="&quot;turn around to face island counter&quot;" newline="True"/>
+            <output expression="&quot;approach island counter&quot;" newline="True"/>
+            <output expression="&quot;pick up open jar of peanut butter&quot;" newline="True"/>
+            <output expression="&quot;pick up peanut butter jar lid&quot;" newline="True"/>
+            <output expression="&quot;put lid back on peanut butter jar&quot;" newline="True"/>
+            <output expression="&quot;place peanut butter jar on island counter&quot;" newline="True"/>
+            <output expression="&quot;pick up open jar of jelly&quot;" newline="True"/>
+            <output expression="&quot;pick up jelly jar lid&quot;" newline="True"/>
+            <output expression="&quot;put lid back on jar of jelly&quot;" newline="True"/>
+            <output expression="&quot;pick up peanut butter jar&quot;" newline="True"/>
+            <output expression="&quot;turn around to face cupboard&quot;" newline="True"/>
+            <output expression="&quot;approach cupboard&quot;" newline="True"/>
+            <output expression="&quot;open cupboard&quot;" newline="True"/>
+            <output expression="&quot;put jar of peanut butter down in cupboard&quot;" newline="True"/>
+            <output expression="&quot;put jar of jelly down in cupboard&quot;" newline="True"/>
+            <output expression="&quot;turn around to face island counter&quot;" newline="True"/>
+            <output expression="&quot;approach island counter&quot;" newline="True"/>
+            <output expression="&quot;pick up bag of bread&quot;" newline="True"/>
+            <output expression="&quot;pick up twist tie&quot;" newline="True"/>
+            <output expression="&quot;put twist tie on bag of bread&quot;" newline="True"/>
+            <output expression="&quot;turn to face cupboard&quot;" newline="True"/>
+            <output expression="&quot;approach cupboard&quot;" newline="True"/>
+            <output expression="&quot;put the bag of bread in the cupboard&quot;" newline="True"/>
+            <output expression="&quot;close cupboard&quot;" newline="True"/>
+            <output expression="&quot;turn to face island counter&quot;" newline="True"/>
+            <output expression="&quot;approach island counter&quot;" newline="True"/>
+            <output expression="&quot;enjoy the fruits of my labor&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
