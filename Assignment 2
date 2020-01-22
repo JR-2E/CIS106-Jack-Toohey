@@ -1,1 +1,6 @@
-#hello world
+# This program displays "Hello world!"
+#
+# References:
+# https://press.rebus.community/programmingfundamentals/chapter/python-examples-1/
+
+print("Hello world!")
