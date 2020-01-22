@@ -1,5 +1,5 @@
 Function Main
     ... This program displays "Hello Jack!" 
     ... 
-    Output "Hello world!"
+    Output "Hello Jack!"
 End
