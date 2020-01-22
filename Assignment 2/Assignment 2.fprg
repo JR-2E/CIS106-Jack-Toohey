@@ -12,7 +12,7 @@
         <parameters/>
         <body>
             <comment text="This program displays &quot;Hello world!&quot;&#13;&#10;"/>
-            <output expression="&quot;Hello world!&quot;" newline="True"/>
+            <output expression="&quot;Hello Jack!&quot;" newline="True"/>
         </body>
     </function>
 </flowgorithm>
