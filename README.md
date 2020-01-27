@@ -10,3 +10,4 @@ I hope to one day learn to use or program on TempleOS.
 
 ## Assignment 2
 
+This assignment was to make a program that displays "Hello World!" then change it to our name. I am unsure what else to put in this paragraph. I would like to start the next assignment please.
