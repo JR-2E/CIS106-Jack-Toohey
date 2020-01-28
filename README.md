@@ -15,3 +15,4 @@ This assignment was to make a program that displays "Hello World!" then change i
 ## Assignment 3
 
 In this assignment, I learned about constants, variables, and data types. The codes that I make for machines uses mostly (if not completely) constants. There are variables in the programming of the machine itself, which I do not work with (on a CNC lathe, the machine adjusts the RPM depending on the current position of the tool to keep the cut speed constant). It is possible that I will work with this one day. 
+(I tried to include stuff from multiple of the examples/activities into one instead of doing two codes. Let me know if this doesn't work for you, but I figured this would cover "two activities")
