@@ -8,5 +8,5 @@ Function Main
     Output "Enter grams of hydrogen"
     Input GramsOfHydrogen
     Assign MolesOfHydrogen = GramsOfHydrogen /  AtomicWeightOfHydrogen
-    Output GramsOfHydrogen & " Grams of Hydrogen is" &  MolesOfHydrogen & " moles of Hydrogen"
+    Output GramsOfHydrogen & " Grams of Hydrogen is " &  MolesOfHydrogen & " moles of Hydrogen"
 End
