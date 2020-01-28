@@ -1,0 +1,13 @@
+Function Main
+    ... This program converts the length and width of a room (in feet) to the area of the room in square yards.
+    Declare Real lengthOfRoom
+    Declare Real widthOfRoom
+    Declare Real squareYardsOfRoom
+    
+    Output "Enter length of room "
+    Input lengthOfRoom
+    Output "Enter width of room "
+    Input widthOfRoom
+    Assign squareYardsOfRoom = lengthOfRoom * widthOfRoom / 9
+    Output "Area of room is " & squareYardsOfRoom & " square yards."
+End
