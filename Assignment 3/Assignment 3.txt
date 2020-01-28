@@ -1,0 +1,12 @@
+Function Main
+    ... This program converts grams of hydrogen to number of atoms in moles
+    Declare Real GramsOfHydrogen
+    Declare Real MolesOfHydrogen
+    Declare Real AtomicWeightOfHydrogen
+    
+    Assign AtomicWeightOfHydrogen = 1.0079
+    Output "Enter grams of hydrogen"
+    Input GramsOfHydrogen
+    Assign MolesOfHydrogen = GramsOfHydrogen /  AtomicWeightOfHydrogen
+    Output GramsOfHydrogen & " Grams of Hydrogen is" &  MolesOfHydrogen & " moles of Hydrogen"
+End

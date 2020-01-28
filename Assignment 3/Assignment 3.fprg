@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Jack"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-27 11:01:35 PM"/>
+        <attribute name="created" value="SmFjaztKQUNLMkU7MjAyMC0wMS0yNzsxMDoxMzo0MCBQTTsyMDQ0"/>
+        <attribute name="edited" value="SmFjaztKQUNLMkU7MjAyMC0wMS0yNzsxMTowMTozNSBQTTsxOzIxNTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program converts grams of hydrogen to number of atoms in moles"/>
+            <declare name="GramsOfHydrogen" type="Real" array="False" size=""/>
+            <declare name="MolesOfHydrogen" type="Real" array="False" size=""/>
+            <declare name="AtomicWeightOfHydrogen" type="Real" array="False" size=""/>
+            <assign variable="AtomicWeightOfHydrogen" expression="1.0079"/>
+            <output expression="&quot;Enter grams of hydrogen&quot;" newline="True"/>
+            <input variable="GramsOfHydrogen"/>
+            <assign variable="MolesOfHydrogen" expression="GramsOfHydrogen /  AtomicWeightOfHydrogen"/>
+            <output expression="GramsOfHydrogen &amp; &quot; Grams of Hydrogen is&quot; &amp;  MolesOfHydrogen &amp; &quot; moles of Hydrogen&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
