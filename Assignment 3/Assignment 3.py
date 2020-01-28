@@ -3,4 +3,4 @@ atomicWeightOfHydrogen = 1.0079
 print("Enter grams of hydrogen")
 gramsOfHydrogen = float(input())
 molesOfHydrogen = gramsOfHydrogen / atomicWeightOfHydrogen
-print(str(gramsOfHydrogen) + " Grams of Hydrogen is" + str(molesOfHydrogen) + " moles of Hydrogen")
+print(str(gramsOfHydrogen) + " Grams of Hydrogen is " + str(molesOfHydrogen) + " moles of Hydrogen")
