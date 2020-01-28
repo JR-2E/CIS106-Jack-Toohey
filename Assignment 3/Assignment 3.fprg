@@ -19,7 +19,7 @@
             <output expression="&quot;Enter grams of hydrogen&quot;" newline="True"/>
             <input variable="GramsOfHydrogen"/>
             <assign variable="MolesOfHydrogen" expression="GramsOfHydrogen /  AtomicWeightOfHydrogen"/>
-            <output expression="GramsOfHydrogen &amp; &quot; Grams of Hydrogen is&quot; &amp;  MolesOfHydrogen &amp; &quot; moles of Hydrogen&quot;" newline="True"/>
+            <output expression="GramsOfHydrogen &amp; &quot; Grams of Hydrogen is &quot; &amp;  MolesOfHydrogen &amp; &quot; moles of Hydrogen&quot;" newline="True"/>
         </body>
     </function>
 </flowgorithm>
