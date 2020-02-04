@@ -1,6 +1,6 @@
 # This program determines the amount of gallons that need to be bought to paint a room in the shape of a quadrilateral parallelagram.
 
-#get needed info from user
+# get needed info from user
 print("What is the width of the room?")
 roomWidth = float(input())
 print("What is the height of the room?")
@@ -12,10 +12,10 @@ areaPerGallon = int(input())
 print("How much does a gallon of paint cost?")
 pricePerGallon = float(input())
 
-#calc room wall area, gallons needed, and total cost of paint
+# calc room wall area, gallons needed, and total cost of paint
 totalRoomArea = 2 * roomLength * roomHeight + 2 * roomWidth * roomHeight
 totalGallons = totalRoomArea / areaPerGallon
 totalCost = totalGallons * pricePerGallon
 
-#give results to user
+# give results to user
 print("You will need " + str(totalGallons) + " gallons of paint (You will need to buy the next whole number of gallons)." + " It will cost approximately $" + str(totalCost) + ".")
