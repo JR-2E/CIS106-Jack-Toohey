@@ -3,22 +3,22 @@
 
 # get needed info from user
 print("What is the width of the room?")
-roomWidth = float(input())
+room_width = float(input())
 print("What is the height of the room?")
-roomHeight = float(input())
+room_height = float(input())
 print("What is the length of the room?")
-roomLength = float(input())
+room_length = float(input())
 print("How many square feet will the gallon of paint cover?")
-areaPerGallon = int(input())
+area_per_gallon = int(input())
 print("How much does a gallon of paint cost?")
-pricePerGallon = float(input())
+price_per_gallon = float(input())
 
 # calc room wall area, gallons needed, and total cost of paint
-totalRoomArea = 2 * roomLength * roomHeight + 2 * roomWidth * roomHeight
-totalGallons = totalRoomArea / areaPerGallon + 0.9999
-totalCost = totalGallons * pricePerGallon
+total_room_area = 2 * room_length * room_height + 2 * room_width * room_height
+total_gallons = total_room_area / area_per_gallon + 0.9999
+total_cost = total_gallons * price_per_gallon
 
 # give results to user
-print("You will need " + str(totalGallons) +
+print("You will need " + str(total_gallons) +
       " gallons of paint " +
-      " It will cost approximately $" + str(totalCost) + ".")
+      " It will cost approximately $" + str(total_cost) + ".")
