@@ -17,5 +17,5 @@ totalRoomArea = 2 * roomLength * roomHeight + 2 * roomWidth * roomHeight
 totalGallons = totalRoomArea / areaPerGallon
 totalCost = totalGallons * pricePerGallon
 
-#present results
+#give results to user
 print("You will need " + str(totalGallons) + " gallons of paint (You will need to buy the next whole number of gallons)." + " It will cost approximately $" + str(totalCost) + ".")
