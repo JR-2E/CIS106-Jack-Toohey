@@ -16,3 +16,7 @@ This assignment was to make a program that displays "Hello World!" then change i
 
 In this assignment, I learned about constants, variables, and data types. The codes that I make for machines uses mostly (if not completely) constants. There are variables in the programming of the machine itself, which I do not work with (on a CNC lathe, the machine adjusts the RPM depending on the current position of the tool to keep the cut speed constant). It is possible that I will work with this one day. 
 
+## Assignment 4
+
+In this assignment, I practiced writing a program for Python without generating it through flowgorithm. I spaced out/separated different parts of the program to make it easier to edit/understand what's going on in certain parts of the program. I also added notes before each section. These are both things I do when writing CNC code by hand (which I do not do much of anymore). There was not much more new material between last week and this week, so I cannot say I really learned anything this week to be honest.
+
