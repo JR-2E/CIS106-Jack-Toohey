@@ -3,17 +3,17 @@
 
 # collect needed info from user
 print("How many hours of work do you average per week?")
-avgHoursPerWeek = float(input())
+avg_hours_per_week = float(input())
 print("How much money (USD) do you make per hour?")
-hourlyWage = float(input())
+hourly_wage = float(input())
 
 # calculate income per various amounts of time
-weeklyIncome = avgHoursPerWeek * hourlyWage
-yearlyIncome = weeklyIncome * 52
-monthlyIncome = yearlyIncome / 12
+weekly_income = avg_hours_per_week * hourly_wage
+yearly_income = weekly_income * 52
+monthly_income = yearly_income / 12
 
 # give results to user
 print("Your gross income is $" +
-      str(weeklyIncome) + " per week, $" +
-      str(monthlyIncome) + " per month, and $" +
-      str(yearlyIncome) + " per year.")
+      str(weekly_income) + " per week, $" +
+      str(monthly_income) + " per month, and $" +
+      str(yearly_income) + " per year.")
