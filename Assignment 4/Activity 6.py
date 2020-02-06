@@ -19,6 +19,6 @@ total_gallons = total_room_area / area_per_gallon + 0.9999
 total_cost = total_gallons * price_per_gallon
 
 # give results to user
-print("You will need " + str(total_gallons) +
+print("You will need " + str(int(total_gallons)) +
       " gallons of paint " +
       " It will cost approximately $" + str(total_cost) + ".")
