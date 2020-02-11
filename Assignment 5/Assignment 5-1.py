@@ -9,9 +9,11 @@ years = int(input())
 months = years * 12
 days = years * 365
 hours = years * 8766
+seconds = years * 31557600
 
 # showing user age in different measurements
 print("You are approxiately " +
       str(months) + " months, " +
-      str(days) + " days, and " +
-      str(hours) + " hours old.")
+      str(days) + " days, " +
+      str(hours) + " hours, and " + 
+      str(seconds) + " seconds old.")
