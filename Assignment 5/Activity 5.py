@@ -1,31 +1,30 @@
-# This program converts width/length in feet
-# to area in square yards
+# This program takes length and width in feet,
+# and converts it to area in square yards
 
 def get_length():
-    global length
-    print("What is the length of the room, in feet?")
+    print("Enter room length.")
     length = float(input())
     return length
 
 def get_width():
-    global width
-    print("What is the width of the room, in feet?")
+    print("Enter room width.")
     width = float(input())
     return width
 
-def calculate_area():
-    global area
+def calculate_area(length,width):
     area = length * width / 9
     return area
 
-def display_results():
-    print("The area of the room is", area, "square yards")
+
+def display_result(area):
+    print("The room has an area of " + str(area) + " square yards.")
+
 
 def main():
-    get_length()
-    get_width()
-    calculate_area()
-    display_results()
+    length = get_length()
+    width = get_width()
+    area = calculate_area(length,width)
+    display_result(area)
 
 
 main()
