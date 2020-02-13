@@ -20,3 +20,6 @@ In this assignment, I learned about constants, variables, and data types. The co
 
 In this assignment, I practiced writing a program for Python without generating it through Flowgorithm. I spaced out/separated different parts of the program to make it easier to edit/understand what's going on in certain parts of the program. I also added notes before each section. These are both things I do when writing CNC code by hand (which I do not do much of anymore). There was not much more new material between last week and this week, so I cannot say I really learned anything this week to be honest.
 
+## Assignment 5
+
+In this assignment, I practices writing a program for Python using modular programming. It took a good amount of messing around in an IDE. I tried to use the example code as a guide but that did not work well. In CNC programming, a "canned cycle" is a line of code that has more actions than just one line would normally include. These are very common and are used in almost every code. The difference is that they require all the information in one line, instead of in separate lines like this. 
