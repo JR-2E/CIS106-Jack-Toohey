@@ -50,7 +50,7 @@ def calculate_total_cost(gallons, cost):
 
 def display_result(gallons, total_cost):
     print("You will need " + str(int(gallons)) +
-    " gallons of paint. It will cost $" + str(total_cost) + ".")
+          " gallons of paint. It will cost $" + str(total_cost) + ".")
 
 
 def main():
