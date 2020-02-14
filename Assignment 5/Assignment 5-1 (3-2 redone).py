@@ -11,7 +11,7 @@ def get_width():
     width = float(input())
     return width
 
-def calculate_area(length,width):
+def calculate_area(length, width):
     area = length * width / 9
     return area
 
@@ -23,7 +23,7 @@ def display_result(area):
 def main():
     length = get_length()
     width = get_width()
-    area = calculate_area(length,width)
+    area = calculate_area(length, width)
     display_result(area)
 
 
