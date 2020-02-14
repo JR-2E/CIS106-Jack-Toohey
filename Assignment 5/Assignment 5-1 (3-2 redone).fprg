@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Jack"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-02-10 08:03:36 PM"/>
+        <attribute name="created" value="SmFjaztKQUNLMkU7MjAyMC0wMi0xMDswNzozMzozMCBQTTsyMDQ0"/>
+        <attribute name="edited" value="SmFjaztKQUNLMkU7MjAyMC0wMi0xMDswODowMzozNiBQTTsxOzIxNTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="length" type="Real" array="False" size=""/>
+            <declare name="width" type="Real" array="False" size=""/>
+            <declare name="Area" type="Real" array="False" size=""/>
+            <assign variable="Length" expression="GetLength()"/>
+            <assign variable="Width" expression="GetWidth()"/>
+            <assign variable="Area" expression="CalculateArea ()"/>
+            <call expression="DisplayResult"/>
+        </body>
+    </function>
+    <function name="CalculateArea" type="Real" variable="area">
+        <parameters/>
+        <body>
+            <declare name="Area" type="Real" array="False" size=""/>
+            <assign variable="area" expression="length * width / 9"/>
+        </body>
+    </function>
+    <function name="DisplayResult" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;The area of the room is &quot; &amp; area &amp; &quot; square yards.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="GetLength" type="Real" variable="length">
+        <parameters/>
+        <body>
+            <declare name="Length" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the length of the room, in feet.&quot;" newline="True"/>
+            <input variable="Length"/>
+        </body>
+    </function>
+    <function name="GetWidth" type="Real" variable="width">
+        <parameters/>
+        <body>
+            <declare name="Width" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the width of the room, in feet.&quot;" newline="True"/>
+            <input variable="Width"/>
+        </body>
+    </function>
+</flowgorithm>
