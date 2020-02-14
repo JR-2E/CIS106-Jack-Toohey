@@ -27,20 +27,21 @@ def get_coverage():
     coverage = float(input())
     return coverage
 
-def calculate_area(length,height,width):
+def calculate_area(length, height, width):
     area = 2 * length * height + 2 * width * height
     return area
 
-def calculate_gallons(area,coverage):
+def calculate_gallons(area, coverage):
     gallons = area / coverage + 0.9999
     return gallons
 
-def calculate_total_cost(gallons,cost):
+def calculate_total_cost(gallons, cost):
     total_cost = gallons * cost
     return total_cost
 
-def display_result(gallons,total_cost):
-    print("You will need " + str(int(gallons)) + " gallons of paint. It will cost $" + str(total_cost) + ".")
+def display_result(gallons, total_cost):
+    print("You will need " + str(int(gallons)) +
+    " gallons of paint. It will cost $" + str(total_cost) + ".")
 
 
 def main():
@@ -49,9 +50,9 @@ def main():
     height = get_height()
     cost = get_cost()
     coverage = get_coverage()
-    area = calculate_area(length,height,width)
-    gallons = calculate_gallons(area,coverage)
-    total_cost = calculate_total_cost(gallons,cost)
-    display_result(gallons,total_cost)
+    area = calculate_area(length, height, width)
+    gallons = calculate_gallons(area, coverage)
+    total_cost = calculate_total_cost(gallons, cost)
+    display_result(gallons, total_cost)
 
 main()
