@@ -23,3 +23,7 @@ In this assignment, I practiced writing a program for Python without generating 
 ## Assignment 5
 
 In this assignment, I practices writing a program for Python using modular programming. It took a good amount of messing around in an IDE. I tried to use the example code as a guide but that did not work well. In CNC programming, a "canned cycle" is a line of code that has more actions than just one line would normally include. These are very common and are used in almost every code. The difference is that they require all the information in one line, instead of in separate lines like this. 
+
+## Assignment 6
+
+In this assignment, I got more practice writing a program for Python using modular programming. I like modular programming, because it seems like it can be used in many more applications when compared to the way we were programming before. It will be interesting to start making programs where some of them are not used, such as the activity in which the program asks what kind of shape the user wants to calculate the area of. 
