@@ -27,3 +27,7 @@ In this assignment, I practices writing a program for Python using modular progr
 ## Assignment 6
 
 In this assignment, I got more practice writing a program for Python using modular programming. I like modular programming, because it seems like it can be used in many more applications when compared to the way we were programming before. It will be interesting to start making programs where some of them are not used, such as the activity in which the program asks what kind of shape the user wants to calculate the area of. 
+
+## Assignment 7
+
+In this assignment, I made a modular program in which some of the functions are not always used. I had thought this would be the next step, and it was not too confusing as learning modular programming was at first. I would think it would be difficult to make a program like this without using modular programming. 
