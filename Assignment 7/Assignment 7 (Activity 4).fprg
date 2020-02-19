@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Jack"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-02-19 10:07:22 AM"/>
+        <attribute name="created" value="SmFjaztKQUNLMkU7MjAyMC0wMi0xOTswOTowMTowMCBBTTsyMDMy"/>
+        <attribute name="edited" value="SmFjaztKQUNLMkU7MjAyMC0wMi0xOTsxMDowNzoyMiBBTTszOzIxNDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Choice" type="String" array="False" size=""/>
+            <output expression="&quot;Which shape do you need to calculate the area of? A circle, triangle, square, rectangle, or rhombus?&quot;" newline="True"/>
+            <input variable="choice"/>
+            <if expression="choice = &quot;circle&quot; or choice = &quot;Circle&quot;">
+                <then>
+                    <call expression="ProcessCircle"/>
+                </then>
+                <else>
+                    <if expression="choice = &quot;rectangle&quot; or choice = &quot;Rectangle&quot; or choice = &quot;square&quot; or choice = &quot;Square&quot; or choice = &quot;rhombus&quot; or choice = &quot;Rhombus&quot;">
+                        <then>
+                            <call expression="ProcessRectangle"/>
+                        </then>
+                        <else>
+                            <if expression="choice = &quot;triangle&quot; or choice = &quot;Triangle&quot;">
+                                <then>
+                                    <call expression="ProcessTriangle"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;No valid shape was entered.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="ProcessCircle" type="Real" variable="CircleArea">
+        <parameters/>
+        <body>
+            <declare name="CircleArea" type="Real" array="False" size=""/>
+            <declare name="Radius" type="Real" array="False" size=""/>
+            <output expression="&quot;What is the radius of the circle?&quot;" newline="True"/>
+            <input variable="Radius"/>
+            <assign variable="CircleArea" expression="Radius * Radius * 3.14159"/>
+            <output expression="&quot;The area of the circle is &quot; &amp; CircleArea &amp; &quot; square units.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="ProcessRectangle" type="Real" variable="RectangleArea">
+        <parameters/>
+        <body>
+            <declare name="RectangleArea" type="Real" array="False" size=""/>
+            <declare name="RectangleBase" type="Real" array="False" size=""/>
+            <declare name="RectangleHeight" type="Real" array="False" size=""/>
+            <output expression="&quot;What is the base of the shape?&quot;" newline="True"/>
+            <input variable="RectangleBase"/>
+            <output expression="&quot;What is the height of the shape?&quot;" newline="True"/>
+            <input variable="RectangleHeight"/>
+            <assign variable="RectangleArea" expression="RectangleBase * RectangleHeight"/>
+            <output expression="&quot;The area is &quot; &amp; RectangleArea &amp; &quot; square units.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="ProcessTriangle" type="Real" variable="TriangleArea">
+        <parameters/>
+        <body>
+            <declare name="TriangleArea" type="Real" array="False" size=""/>
+            <declare name="TriangleBase" type="Real" array="False" size=""/>
+            <declare name="TriangleHeight" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter triangle base dimension.&quot;" newline="True"/>
+            <input variable="TriangleBase"/>
+            <output expression="&quot;Enter triangle height dimension.&quot;" newline="True"/>
+            <input variable="TriangleHeight"/>
+            <assign variable="TriangleArea" expression="TriangleBase * TriangleHeight / 2"/>
+            <output expression="&quot;The area of the triangle is &quot; &amp; TriangleArea &amp; &quot; square units.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
