@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Jack"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-02-26 11:08:43 AM"/>
+        <attribute name="created" value="SmFjaztKQUNLMkU7MjAyMC0wMi0yNjsxMDo0NjozNSBBTTsyMDM5"/>
+        <attribute name="edited" value="SmFjaztKQUNLMkU7MjAyMC0wMi0yNjsxMTowODo0MyBBTTsxOzIxNDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ShoeSize" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter your shoe size.&quot;" newline="True"/>
+            <input variable="ShoeSize"/>
+            <if expression="Shoesize &lt;4">
+                <then>
+                    <output expression="&quot;Your sock size is extra small.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="ShoeSize &gt;=4 and ShoeSize &lt;=6">
+                        <then>
+                            <output expression="&quot;Your sock size is small.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="ShoeSize &gt;=7 and ShoeSize &lt;=9">
+                                <then>
+                                    <output expression="&quot;Your sock size is medium.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="ShoeSize &gt;=10 and ShoeSize &lt;=12">
+                                        <then>
+                                            <output expression="&quot;Your sock size is large.&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="ShoeSize &gt;=13">
+                                                <then>
+                                                    <output expression="&quot;Your sock size is extra large.&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;No valid shoe size was entered. Shoe size must be a positive number.&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
