@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Jack"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-02-27 09:06:49 AM"/>
+        <attribute name="created" value="SmFjaztKQUNLMkU7MjAyMC0wMi0yNzswODozMjo1OSBBTTsyMDQ4"/>
+        <attribute name="edited" value="SmFjaztKQUNLMkU7MjAyMC0wMi0yNzswOTowNjo0OSBBTTsxOzIxNTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="getChoice()"/>
+            <if expression="choice = &quot;rectangle&quot; or choice = &quot;Rectangle&quot;">
+                <then>
+                    <call expression="getRectangleBase()"/>
+                    <call expression="getRectangleHeight()"/>
+                    <call expression="calcRectangleArea(rectangleBase, rectangleHeight)"/>
+                    <call expression="displayRectangleArea(rectangleArea)"/>
+                </then>
+                <else>
+                    <if expression="choice = &quot;circle&quot; or choice = &quot;Circle&quot;">
+                        <then>
+                            <call expression="getRadius()"/>
+                            <call expression="calcCircleArea(radius)"/>
+                            <call expression="displayCircleArea(circleArea)"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;You must only enter either circle or rectangle.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="calcCircleArea" type="Real" variable="circleArea">
+        <parameters>
+            <parameter name="radius" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="circleArea" type="Real" array="False" size=""/>
+            <assign variable="circleArea" expression="radius * radius * 3.14159"/>
+        </body>
+    </function>
+    <function name="calcRectangleArea" type="Real" variable="rectangleArea">
+        <parameters>
+            <parameter name="rectangleBase" type="Real" array="False"/>
+            <parameter name="rectangleHeight" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="rectangleArea" type="Real" array="False" size=""/>
+            <assign variable="rectangleArea" expression="rectangleBase * rectangleHeight"/>
+        </body>
+    </function>
+    <function name="displayCircleArea" type="None" variable="">
+        <parameters>
+            <parameter name="circleArea" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;The area of the circle is &quot; &amp; circleArea &amp; &quot; square units.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="displayRectangleArea" type="None" variable="">
+        <parameters>
+            <parameter name="rectangleArea" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;The area of the rectangle is &quot; &amp; rectangleArea &amp; &quot; square units.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="getChoice" type="String" variable="choice">
+        <parameters/>
+        <body>
+            <declare name="choice" type="String" array="False" size=""/>
+            <output expression="&quot;Enter rectangle to calculate the area of a rectangle, or circle to calculate the area of a circle.&quot;" newline="True"/>
+            <input variable="choice"/>
+        </body>
+    </function>
+    <function name="getRadius" type="Real" variable="radius">
+        <parameters/>
+        <body>
+            <declare name="radius" type="Real" array="False" size=""/>
+            <output expression="&quot;What is the radius of the circle?&quot;" newline="True"/>
+            <input variable="radius"/>
+        </body>
+    </function>
+    <function name="getRectangleHeight" type="Real" variable="rectangleHeight">
+        <parameters/>
+        <body>
+            <declare name="rectangleHeight" type="Real" array="False" size=""/>
+            <output expression="&quot;What is the height of the rectangle?&quot;" newline="True"/>
+            <input variable="rectangleHeight"/>
+        </body>
+    </function>
+    <function name="getRectangleBase" type="Real" variable="rectangleBase">
+        <parameters/>
+        <body>
+            <declare name="rectangleBase" type="Real" array="False" size=""/>
+            <output expression="&quot;What is the base of the rectangle?&quot;" newline="True"/>
+            <input variable="rectangleBase"/>
+        </body>
+    </function>
+</flowgorithm>
