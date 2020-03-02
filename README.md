@@ -31,3 +31,7 @@ In this assignment, I got more practice writing a program for Python using modul
 ## Assignment 7
 
 In this assignment, I made a modular program in which some of the functions are not always used. I had thought this would be the next step, and it was not too confusing as learning modular programming was at first. I would think it would be difficult to make a program like this without using modular programming. 
+
+## Assignment 8
+
+In this assignment, I learned about and started to use loops in programs. Loops (so far) seem to be a pretty straight-forward concept. A part of the program is looped until a count reaches a certain value. I have made programs for CNC machines that use canned cycles, which can have loops, where only some values change. For example, to make a circular pocket going down in the Z coordinate in a piece of metal, the same chunk of program is used, but the Z coordinate changes until it reaches a certain value (the Z value originally given to the machine). This is automatically done in a loop, in a part of a program called a canned cycle.
