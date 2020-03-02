@@ -1,0 +1,16 @@
+Function Main
+    ... This program shows the column on a multiplication table for a certain number
+    Declare Integer number
+    Declare Integer limit
+    Declare Integer count
+    
+    Output "What number would you like to see the column from a multiplication table for?"
+    Input number
+    Output "How far down the multiplication table should the column go?"
+    Input limit
+    Assign count = 1
+    While count <= limit
+        Output number * count
+        Assign count = count + 1
+    End
+End
