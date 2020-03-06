@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Jack"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-03-05 07:01:57 PM"/>
+        <attribute name="created" value="SmFjaztKQUNLMkU7MjAyMC0wMy0wNTswNjo0NzowNCBQTTsyMDU0"/>
+        <attribute name="edited" value="SmFjaztKQUNLMkU7MjAyMC0wMy0wNTswNzowMTo1NyBQTTsxOzIxNjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <declare name="limit" type="Integer" array="False" size=""/>
+            <assign variable="number" expression="getNumber()"/>
+            <assign variable="limit" expression="getLimit()"/>
+            <call expression="loop(limit, number)"/>
+        </body>
+    </function>
+    <function name="getLimit" type="Integer" variable="limit">
+        <parameters/>
+        <body>
+            <declare name="limit" type="Integer" array="False" size=""/>
+            <output expression="&quot;How far down the multiplication table should the column go?&quot;" newline="True"/>
+            <input variable="limit"/>
+        </body>
+    </function>
+    <function name="getNumber" type="Integer" variable="number">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <output expression="&quot;What number would you like to see the column from a multiplication table for?&quot;" newline="True"/>
+            <input variable="number"/>
+        </body>
+    </function>
+    <function name="loop" type="None" variable="">
+        <parameters>
+            <parameter name="limit" type="Integer" array="False"/>
+            <parameter name="number" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="1"/>
+            <while expression="count &lt;= limit">
+                <output expression="number &amp; &quot;*&quot; &amp; count &amp; &quot;=&quot; &amp; number * count" newline="True"/>
+                <assign variable="count" expression="count + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
