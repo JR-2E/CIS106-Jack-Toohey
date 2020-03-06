@@ -23,6 +23,10 @@ def results(average_score):
     print("The average test score is " + str(average_score))
 
 # Main
-amount_of_scores = get_amount_of_scores()
-average_score = loop(amount_of_scores)
-results(average_score)
+def main():
+    amount_of_scores = get_amount_of_scores()
+    average_score = loop(amount_of_scores)
+    results(average_score)
+    
+    
+main()
