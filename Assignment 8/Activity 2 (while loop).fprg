@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Jack"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-03-01 08:24:55 PM"/>
+        <attribute name="created" value="SmFjaztKQUNLMkU7MjAyMC0wMy0wMTswODowNzozMSBQTTsyMDQ4"/>
+        <attribute name="edited" value="SmFjaztKQUNLMkU7MjAyMC0wMy0wMTswODoyNDo1NSBQTTsxOzIxNjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program gets test scores, and finds the average"/>
+            <declare name="score" type="Integer" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="amountOfScores" type="Integer" array="False" size=""/>
+            <declare name="totalScore" type="Integer" array="False" size=""/>
+            <declare name="averageScore" type="Real" array="False" size=""/>
+            <output expression="&quot;How many test scores are there?&quot;" newline="True"/>
+            <input variable="amountOfScores"/>
+            <assign variable="count" expression="0"/>
+            <assign variable="totalScore" expression="0"/>
+            <while expression="count &lt; amountOfScores">
+                <assign variable="count" expression="count + 1"/>
+                <output expression="&quot;Enter test score &quot; &amp; count" newline="True"/>
+                <input variable="score"/>
+                <assign variable="totalScore" expression="totalScore + score"/>
+            </while>
+            <assign variable="averageScore" expression="totalScore / amountOfScores"/>
+            <output expression="&quot;The average test score is &quot; &amp; averageScore" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

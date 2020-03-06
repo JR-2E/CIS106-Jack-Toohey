@@ -1,0 +1,21 @@
+Function Main
+    ... This program gets test scores, and finds the average
+    Declare Integer score
+    Declare Integer count
+    Declare Integer amountOfScores
+    Declare Integer totalScore
+    Declare Real averageScore
+    
+    Output "How many test scores are there?"
+    Input amountOfScores
+    Assign count = 0
+    Assign totalScore = 0
+    While count < amountOfScores
+        Assign count = count + 1
+        Output "Enter test score " & count
+        Input score
+        Assign totalScore = totalScore + score
+    End
+    Assign averageScore = totalScore / amountOfScores
+    Output "The average test score is " & averageScore
+End
