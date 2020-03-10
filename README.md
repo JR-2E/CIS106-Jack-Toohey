@@ -35,3 +35,7 @@ In this assignment, I made a modular program in which some of the functions are 
 ## Assignment 8
 
 In this assignment, I learned about and started to use loops in programs. Loops (so far) seem to be a pretty straight-forward concept. A part of the program is looped until a count reaches a certain value. I have made programs for CNC machines that use canned cycles, which can have loops, where only some values change. For example, to make a circular pocket going down in the Z coordinate in a piece of metal, the same chunk of program is used, but the Z coordinate changes until it reaches a certain value (the Z value originally given to the machine). This is automatically done in a loop, in a part of a program called a canned cycle.
+
+## Assignment 9
+
+In this assignment, I practiced more While loops, and included one in a program that I had already made for a previous assignment. Honestly, the most difficult part for me this week was trying to figure out how alter the number that my program guessed (Activity 1). There was not much different this week from last week.
