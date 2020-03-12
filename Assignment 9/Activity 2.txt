@@ -13,13 +13,16 @@ Function loop
     Declare String answer
     Declare Real high
     Declare Real low
+    Declare Integer guessAmount
     
+    Assign guessAmount = 1
     Assign correct = 0
     Assign high = 100
     Assign low = 0
     While correct = 0
         Assign guess = (high + low) / 2
-        Output "Is " & guess & " too high, too low, or is it correct?"
+        Output "Guess number " & guessAmount & "." & " Is " & guess & " too high, too low, or is it correct?"
+        Assign guessAmount = guessAmount + 1
         Input answer
         If answer = "High" or answer = "high"
             Assign high = guess

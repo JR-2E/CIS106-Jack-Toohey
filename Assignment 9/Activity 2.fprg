@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Jack"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-03-12 08:34:45 AM"/>
+        <attribute name="created" value="SmFjaztKQUNLMkU7MjAyMC0wMy0wOTswODozMjozOCBBTTsyMDQ2"/>
+        <attribute name="edited" value="SmFjaztKQUNLMkU7MjAyMC0wMy0xMjswODozNDo0NSBBTTsyOzIxNDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="directions()"/>
+            <call expression="loop()"/>
+        </body>
+    </function>
+    <function name="directions" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Choose an integer between 0 and 100 in your head. This program will try to find it. Input 'correct' when the program gets it right, or if your number is higher.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="loop" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="correct" type="Integer" array="False" size=""/>
+            <declare name="guess" type="Integer" array="False" size=""/>
+            <declare name="answer" type="String" array="False" size=""/>
+            <declare name="high" type="Real" array="False" size=""/>
+            <declare name="low" type="Real" array="False" size=""/>
+            <declare name="guessAmount" type="Integer" array="False" size=""/>
+            <assign variable="guessAmount" expression="1"/>
+            <assign variable="correct" expression="0"/>
+            <assign variable="high" expression="100"/>
+            <assign variable="low" expression="0"/>
+            <while expression="correct = 0">
+                <assign variable="guess" expression="(high + low) / 2"/>
+                <output expression="&quot;Guess number &quot; &amp; guessAmount &amp; &quot;.&quot; &amp; &quot; Is &quot; &amp; guess &amp; &quot; too high, too low, or is it correct?&quot;" newline="True"/>
+                <assign variable="guessAmount" expression="guessAmount + 1"/>
+                <input variable="answer"/>
+                <if expression="answer = &quot;High&quot; or answer = &quot;high&quot;">
+                    <then>
+                        <assign variable="high" expression="guess"/>
+                        <assign variable="high" expression="guess + 1"/>
+                    </then>
+                    <else>
+                        <if expression="answer = &quot;Low&quot; or answer = &quot;low&quot;">
+                            <then>
+                                <assign variable="low" expression="guess"/>
+                                <assign variable="low" expression="guess - 1"/>
+                            </then>
+                            <else>
+                                <if expression="answer = &quot;Correct&quot; or answer = &quot;correct&quot;">
+                                    <then>
+                                        <assign variable="correct" expression="1"/>
+                                        <output expression="&quot;I have found your number! It is &quot; &amp; guess &amp; &quot;!&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Your input was invalid&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
