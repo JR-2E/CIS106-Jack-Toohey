@@ -8,7 +8,7 @@ def loop():
     low = 0
     while correct == 0:
         guess = (high + low) / 2
-        print("Guess number " + str(guessAmount) + "." + " Is " + str(guess) + " too high, too low, or is it correct?")
+        print("Guess number " + str(guessAmount) + "." + " Is " + str(int(guess)) + " too high, too low, or is it correct?")
         guessAmount = guessAmount + 1
         answer = input()
         if answer == "High" or answer == "high":
