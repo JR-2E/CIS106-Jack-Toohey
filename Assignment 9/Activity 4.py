@@ -1,85 +1,69 @@
-def calcCircleArea(radius):
-    circleArea = radius * radius * 3.14159
-    return circleArea
+# This program calculates the area of circles, and rectangles.
 
 
-def calcRectangleArea(rectangleBase, rectangleHeight):
-    rectangleArea = rectangleBase * rectangleHeight
-    return rectangleArea
+def calc_circle_area(radius):
+    circle_area = radius * radius * 3.14159
+    return circle_area
 
 
-def displayCircleArea(circleArea):
-    print("The area of the circle is " + str(circleArea) + " square units.")
+def calc_rectangle_area(rectangle_base, rectangle_height):
+    rectangle_area = rectangle_base * rectangle_height
+    return rectangle_area
 
 
-def displayRectangleArea(rectangleArea):
+def display_circle_area(circle_area):
+    print("The area of the circle is " + str(circle_area) + " square units.")
+
+
+def display_rectangle_area(rectangle_area):
     print("The area of the rectangle is " +
-          str(rectangleArea) + " square units.")
+          str(rectangle_area) + " square units.")
 
 
-def getAmount():
-    print("How many shapes would you like to calculate the area of?")
-    amount = int(input())
-    return amount
-
-
-def getChoice():
-    print("Enter rectangle to calculate the area of a rectangle," +
-          "or circle to calculate the area of a circle.")
+def get_choice():
+    print("Enter rectangle to calculate the area of a rectangle, " +
+          "or circle to calculate the area of a circle. " +
+          "Enter 'done' when you are finished.")
     choice = input()
     return choice
 
 
-def getRadius():
+def get_radius():
     print("What is the radius of the circle?")
     radius = float(input())
     return radius
 
 
-def getRectangleBase():
+def get_rectangle_base():
     print("What is the base of the rectangle?")
-    rectangleBase = float(input())
-    return rectangleBase
+    rectangle_base = float(input())
+    return rectangle_base
 
 
-def getRectangleHeight():
+def get_rectangle_height():
     print("What is the height of the rectangle?")
-    rectangleHeight = float(input())
-    return rectangleHeight
+    rectangle_height = float(input())
+    return rectangle_height
 
 
-def loop(amount):
-    getChoice()
-    if choice == "rectangle" or choice == "Rectangle":
-        getRectangleBase()
-        getRectangleHeight()
-        calcRectangleArea(rectangleBase, rectangleHeight)
-        displayRectangleArea(rectangleArea)
-    else:
-        if choice == "circle" or choice == "Circle":
-            getRadius()
-            calcCircleArea(radius)
-            displayCircleArea(circleArea)
-        else:
-            print("You must only enter either circle or rectangle.")
+def loop():
     count = 1
-    while count <= amount - 1:
-        getChoice()
+    while count == 1:
+        choice = get_choice()
         if choice == "rectangle" or choice == "Rectangle":
-            getRectangleBase()
-            getRectangleHeight()
-            calcRectangleArea(rectangleBase, rectangleHeight)
-            displayRectangleArea(rectangleArea)
+            rectangle_base = get_rectangle_base()
+            rectangle_height = get_rectangle_height()
+            rectangle_area = calc_rectangle_area(rectangle_base,
+                                                 rectangle_height)
+            display_rectangle_area(rectangle_area)
+        elif choice == "circle" or choice == "Circle":
+                radius = get_radius()
+                circle_area = calc_circle_area(radius)
+                display_circle_area(circle_area)
+        elif choice == "done" or choice == "Done":
+                count = 0
         else:
-            if choice == "circle" or choice == "Circle":
-                getRadius()
-                calcCircleArea(radius)
-                displayCircleArea(circleArea)
-            else:
-                print("You must only enter either circle or rectangle.")
-        count = count + 1
-    return area
+            print("You must only enter either circle or rectangle   .")
 
 # Main
-amount = getAmount()
-loop(amount)
+loop()
