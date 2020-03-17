@@ -39,3 +39,7 @@ In this assignment, I learned about and started to use loops in programs. Loops 
 ## Assignment 9
 
 In this assignment, I practiced more While loops, and included one in a program that I had already made for a previous assignment. Honestly, the most difficult part for me this week was trying to figure out how alter the number that my program guessed (Activity 1). There was not much different this week from last week.
+
+## Assignment 10
+
+In this assignment, I practiced a new kind of loop. This loop is useful because it includes a couple parts of the loop that you would normally have to create manually, like the count amount/limit. Other than that, it was not very much different from the other normal loops that we had worked on. 
