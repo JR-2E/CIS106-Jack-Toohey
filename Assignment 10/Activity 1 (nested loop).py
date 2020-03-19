@@ -35,7 +35,7 @@ def loop():
         for j in range(across_min, across_max + 1, 1):
             print("{:^3}".format(i * j), end=" ")
         print()
-        
+
 # Main
 across_min = get_across_min()
 across_max = get_across_max()
