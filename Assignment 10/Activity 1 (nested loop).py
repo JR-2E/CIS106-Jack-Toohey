@@ -32,15 +32,17 @@ def get_down_max():
 
 def top_row(across_min, across_max):
     for j in range(across_min, across_max + 1, 1):
-        print(("   ") + "{:^3}".format(j), end="")
+        print(("\t") + "{:^2}".format(j), end="")
     print()
     
     
-def loop(across_min, across_max, down_min, down_max):
+def display_table(across_min, across_max, down_min, down_max):
+    top_row(across_min, across_max)
+
     for i in range(down_min, down_max + 1, 1):
-        print("{:^3}".format(i), end=" ")
+        print("{:^2}".format(i), end="\t")
         for j in range(across_min, across_max + 1, 1):
-            print("{:^3}".format(i * j), end="   ")
+            print("{:^2}".format(i * j), end="\t")
         print()
 
 
@@ -50,8 +52,7 @@ def main():
     across_max = get_across_max()
     down_min = get_down_min()
     down_max = get_down_max()
-    top_row(across_min, across_max)
-    loop(across_min, across_max, down_min, down_max)
+    display_table(across_min, across_max, down_min, down_max)
 
 
 main()

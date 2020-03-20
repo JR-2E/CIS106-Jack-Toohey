@@ -11,9 +11,8 @@ def getNumber():
     return number
 
 def loop(limit, number):
-    count = 1
     for count in range(1, limit + 1, 1):
-        print(str(number) + "*" + str(count) + "=" + str(number * count))
+        print(str(number) + " * " + str(count) + " = " + str(number * count))
 
 # Main
 number = getNumber()
