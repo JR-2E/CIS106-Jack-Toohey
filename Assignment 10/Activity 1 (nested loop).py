@@ -36,9 +36,14 @@ def loop():
             print("{:^3}".format(i * j), end=" ")
         print()
 
+
 # Main
-across_min = get_across_min()
-across_max = get_across_max()
-down_min = get_down_min()
-down_max = get_down_max()
-loop()
+def main():
+    across_min = get_across_min()
+    across_max = get_across_max()
+    down_min = get_down_min()
+    down_max = get_down_max()
+    loop()
+
+
+main()
