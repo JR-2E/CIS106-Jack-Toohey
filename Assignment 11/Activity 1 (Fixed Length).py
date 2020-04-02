@@ -1,3 +1,7 @@
+# This program asks how many grades there are,
+# gets the grades from the user,
+# then finds the lowest, highest, and average score.
+
 def get_number_of_grades():
     print("How many grades are there?")
     number_of_grades = int(input())
@@ -23,7 +27,7 @@ def display_results(grades, avg_grade, number_of_grades):
 
 def main():
     number_of_grades = get_number_of_grades()
-    grades = [""] * (number_of_grades)
+    grades = [None] * (number_of_grades)
 
     count = 0
     while count != number_of_grades:
