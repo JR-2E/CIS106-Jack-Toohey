@@ -1,3 +1,6 @@
+# Comments go here...
+
+
 def get_year():
     print("What year do you want to know the " +
           "amount of days in each month for?")
@@ -6,57 +9,60 @@ def get_year():
 
 
 def get_leap_year(given_year):
-    year = given_year
-    while year >= 4:
-        if year == 4:
-            leap_year = True
-        else:
-            leap_year = False
-        year = year - 4
-    year = given_year
-    while year >= 100:
-        if year == 100:
-            leap_year = False
-        year = year - 100
-    year = given_year
-    while year >= 400:
-        if year == 400:
-            leap_year = True
-        year = year - 400
-    return leap_year
+    if given_year % 400 == 0:
+        return True
+
+    if given_year % 100 == 0:
+        return False
+
+    if given_year % 4 == 0:
+        return True
+
+    return False
 
 
-def display_results(leap_year, normal_year_day_array, normal_year_month_array,
-                    leap_year_day_array, leap_year_month_array):
-    if leap_year is True:
-        print("Enter the month number of the month " +
-              "which you want the number of days.")
-        month_number = int(input())
-        print(leap_year_month_array[month_number - 1])
-        print(leap_year_day_array[month_number - 1])
+def get_month():
+    print("Enter the month number of the month " +
+            "which you want the number of days.")
+    month_number = int(input())
+    return month_number
+
+
+def display_results(month_name, month_days):
+        print(f"{month_name} has {month_days} days")
+
+
+def get_month_name(month):
+    months = ["January", "February", "March", "April",
+        "May", "June", "July", "August", "September", 
+        "October", "November", "December"]
+
+    if month < 1 or month > 12:
+        return "Unknown"
+    return months[month - 1]
+
+
+def get_month_days(year, month):
+    if get_leap_year(year):
+        days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     else:
-        print("Enter the month number of the month " +
-              "which you want the number of days.")
-        month_number = int(input())
-        print(normal_year_month_array[month_number - 1])
-        print(normal_year_day_array[month_number - 1])
+        days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+    if month < 1 or month > 12:
+        return "Unknown"
+    return days[month - 1]
+
 
 
 def main():
-    normal_year_day_array = [""] * (12)
-    normal_year_month_array = [""] * (12)
-    leap_year_day_array = [""] * (12)
-    leap_year_month_array = [""] * (12)
+    while True:
+        year = get_year()
+        month = get_month()
+        if month < 1 or month > 12:
+            break
+        month_name = get_month_name(month)
+        month_days = get_month_days(year, month)
+        display_results(month_name, month_days)
 
-    leap_year_day_array = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    leap_year_month_array = ["January", "February", "March", "April",
-                             "May", "June", "July", "August", "September", "October", "November", "December"]
-    normal_year_day_array = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    normal_year_month_array = ["January", "February", "March", "April",
-                             "May", "June", "July", "August", "September", "October", "November", "December"]
-    year = get_year()
-    leap_year = get_leap_year(year)
-    display_results(leap_year, normal_year_day_array, normal_year_month_array,
-                    leap_year_day_array, leap_year_month_array)
 
 main()

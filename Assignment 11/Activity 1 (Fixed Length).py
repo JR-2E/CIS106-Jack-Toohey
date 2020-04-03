@@ -2,6 +2,7 @@
 # gets the grades from the user,
 # then finds the lowest, highest, and average score.
 
+
 def get_number_of_grades():
     print("How many grades are there?")
     number_of_grades = int(input())
@@ -19,10 +20,10 @@ def calc_avg_grade(number_of_grades, grades):
     return avg_grade
 
 
-def display_results(grades, avg_grade, number_of_grades):
+def display_results(avg_grade, low, high):
     print("The average grade is " + str(avg_grade))
-    print("The lowest grade is " + str(grades[0]) + ".")
-    print("The highest grade is " + str(grades[number_of_grades - 1]))
+    print("The lowest grade is " + str(low))
+    print("The highest grade is " + str(high))
 
 
 def main():
@@ -37,6 +38,9 @@ def main():
 
     grades.sort()
     avg_grade = calc_avg_grade(number_of_grades, grades)
-    display_results(grades, avg_grade, number_of_grades)
+    low = grades[0]
+    high = grades[number_of_grades - 1]
+    display_results(avg_grade, low, high)
+
 
 main()
