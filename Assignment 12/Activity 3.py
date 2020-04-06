@@ -17,7 +17,7 @@ def calc_avg_grade(number_of_grades, grades):
         grade_sum = grade_sum + grades[avg_count]
         avg_count = avg_count + 1
     avg_grade = float(grade_sum) / float(number_of_grades)
-    return avg_grade, grades
+    return avg_grade
 
 
 def display_results(avg_grade, low, high, grades, number_of_grades):
@@ -34,7 +34,6 @@ def display_results(avg_grade, low, high, grades, number_of_grades):
 def main():
     number_of_grades = get_number_of_grades()
     grades = [None] * (number_of_grades)
-
     count = 0
     while count != number_of_grades:
         print("Enter a grade.")
