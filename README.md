@@ -48,3 +48,7 @@ In this assignment, I practiced a new kind of loop. This loop is useful because 
 
 In this assignment, I learned about/ started working with arrays. Arrays are useful for storing an *array* of information for later use.
 They can also be used to sort information, like I did in the Activity 1 highest/lowest/average grade assignment. When programming CNC machines at work, coordinates and other values can be saved in a section of the code as reference values, to be used at a later time in the program. Instead of putting the whole coordinate in every time, you save them as a reference value, and substitute the coordinate for the reference value later the program. 
+
+## Assignment 12
+
+In this assignment, I continued working with arrays. There was not much programming to be done from scratch, because the activities for this week were based around programs from previous weeks. There was not much, if any, new things that had to be used in these programs.
