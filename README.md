@@ -51,4 +51,4 @@ They can also be used to sort information, like I did in the Activity 1 highest/
 
 ## Assignment 12
 
-In this assignment, I continued working with arrays. There was not much programming to be done from scratch, because the activities for this week were based around programs from previous weeks. There was not much, if any, new things that had to be used in these programs.
+In this assignment, I used dynamic arrays. There was not much programming to be done from scratch, because the activities for this week were based around programs from previous weeks. Dynamic arrays seem very useful. The only reason I would think you would need static arrays is for when you only need a specific amount of inputs, or you do not want to rely on the user to end the process of adding to the array.
