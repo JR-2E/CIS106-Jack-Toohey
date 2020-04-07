@@ -9,18 +9,10 @@ def get_grades():
     while not check:
         print("Enter a grade.")
         grade = float(input())
-        grades.append(grade)
-        print("Do you have more grades to enter? (Yes/No)")
-        answer = input()
-        if answer.lower() == "no":
+        if grade < 0:
             check = True
-        elif answer.lower() == "yes":
-            check = False
+        grades.append(grade)
     return grades
-
-
-def calc_avg_grade(grades):
-    return sum(grades) / len(grades)
 
 
 def display_results(avg_grade, low, high, grades):
@@ -37,7 +29,7 @@ def display_results(avg_grade, low, high, grades):
 def main():
     grades = get_grades()
     grades.sort(reverse = True)
-    avg_grade = calc_avg_grade(grades)
+    avg_grade = sum(grades) / len(grades)
     low = grades[0]
     high = grades[len(grades)-1]
     display_results(avg_grade, low, high, grades)
