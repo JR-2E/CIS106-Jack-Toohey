@@ -46,7 +46,7 @@ def display_results(guesses, count):
     output_count = 0
     for output_count in range(0, count, 1):
         print("Guess # " + str((output_count + 1)) +
-              " was " + str(guesses[output_count]) + ".")
+              " was " + str(int(guesses[output_count])) + ".")
 
 
 def main():
