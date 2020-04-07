@@ -6,12 +6,16 @@
 def get_grades():
     grades = []
     check = False
+    print("When promted, enter a grade." +
+          "When you are done," +
+          "enter any negative number instead of a grade score.")
     while not check:
         print("Enter a grade.")
         grade = float(input())
         if grade < 0:
             check = True
-        grades.append(grade)
+        else:
+            grades.append(grade)
     return grades
 
 
@@ -30,8 +34,8 @@ def main():
     grades = get_grades()
     grades.sort(reverse = True)
     avg_grade = sum(grades) / len(grades)
-    low = grades[0]
-    high = grades[len(grades)-1]
+    high = grades[0]
+    low = grades[len(grades)-1]
     display_results(avg_grade, low, high, grades)
 
 
