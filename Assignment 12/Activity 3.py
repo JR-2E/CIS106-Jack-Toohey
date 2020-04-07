@@ -3,48 +3,44 @@
 # then finds the lowest, highest, and average score.
 
 
-def get_number_of_grades():
-    print("How many grades are there?")
-    number_of_grades = int(input())
-    grades = [0] * (number_of_grades)
-    return number_of_grades
+def get_grades():
+    grades = []
+    check = False
+    while not check:
+        print("Enter a grade.")
+        grade = float(input())
+        grades.append(grade)
+        print("Do you have more grades to enter? (Yes/No)")
+        answer = input()
+        if answer.lower() == "no":
+            check = True
+        elif answer.lower() == "yes":
+            check = False
+    return grades
 
 
-def calc_avg_grade(number_of_grades, grades):
-    avg_count = 0
-    grade_sum = 0
-    while avg_count < number_of_grades:
-        grade_sum = grade_sum + grades[avg_count]
-        avg_count = avg_count + 1
-    avg_grade = float(grade_sum) / float(number_of_grades)
-    return avg_grade
+def calc_avg_grade(grades):
+    return sum(grades) / len(grades)
 
 
-def display_results(avg_grade, low, high, grades, number_of_grades):
+def display_results(avg_grade, low, high, grades):
     output_count = 0
     print("The average grade is " + str(avg_grade))
     print("The lowest grade is " + str(low))
     print("The highest grade is " + str(high))
-    print("The grades in lowest to highest order are as follows:")
-    while output_count != number_of_grades:
+    print("The grades in highest to lowest order are as follows:")
+    while output_count != len(grades):
         print(grades[output_count])
         output_count = output_count + 1
 
 
 def main():
-    number_of_grades = get_number_of_grades()
-    grades = [None] * (number_of_grades)
-    count = 0
-    while count != number_of_grades:
-        print("Enter a grade.")
-        grades[count] = float(input())
-        count = count + 1
-
-    grades.sort()
-    avg_grade = calc_avg_grade(number_of_grades, grades)
+    grades = get_grades()
+    grades.sort(reverse = True)
+    avg_grade = calc_avg_grade(grades)
     low = grades[0]
-    high = grades[number_of_grades - 1]
-    display_results(avg_grade, low, high, grades, number_of_grades)
+    high = grades[len(grades)-1]
+    display_results(avg_grade, low, high, grades)
 
 
 main()
