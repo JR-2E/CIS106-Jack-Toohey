@@ -10,7 +10,7 @@ def directions():
 
 
 def loop():
-    guesses = [0] * (69)
+    guesses = []
     guess_amount = 1
     correct = 0
     high = 100
@@ -18,10 +18,10 @@ def loop():
     count = 0
     while correct == 0:
         guess = (high + low) / 2
-        guesses[count] = guess
+        guesses.append(guess)
         count = count + 1
         print("Guess number " + str(guess_amount) + "." +
-              " Is " + str(guess) +
+              " Is " + str(int(guess)) +
               " too high, too low, or is it correct?")
         guess_amount = guess_amount + 1
         answer = input()
@@ -36,7 +36,7 @@ def loop():
                 if answer == "Correct" or answer == "correct":
                     correct = 1
                     print("I have found your number! It is " +
-                          str(guess) + "!")
+                          str(int(guess)) + "!")
                 else:
                     print("Your input was invalid")
     return guesses, count
