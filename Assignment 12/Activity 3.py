@@ -4,18 +4,16 @@
 
 
 def get_grades():
-    grades = []
-    check = False
     print("When promted, enter a grade." +
           "When you are done," +
           "enter any negative number instead of a grade score.")
-    while not check:
+    grades = []
+    while True:
         print("Enter a grade.")
         grade = float(input())
         if grade < 0:
-            check = True
-        else:
-            grades.append(grade)
+            break
+        grades.append(grade)
     return grades
 
 

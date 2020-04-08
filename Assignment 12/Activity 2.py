@@ -2,24 +2,21 @@
 # then displays all of the program's guesses.
 
 
-def directions():
+def display_directions():
     print("Choose an integer between 0 and 100 in your head. " +
           "This program will try to find it. " +
           "Input 'correct' when the program gets it right, " +
           "or if your number is higher.")
 
 
-def loop():
+def play_game():
     guesses = []
     guess_amount = 1
-    correct = 0
     high = 100
     low = 0
-    count = 0
-    while correct == 0:
+    while True:
         guess = (high + low) / 2
         guesses.append(guess)
-        count = count + 1
         print("Guess number " + str(guess_amount) + "." +
               " Is " + str(int(guess)) +
               " too high, too low, or is it correct?")
@@ -34,25 +31,24 @@ def loop():
                 low = guess - 1
             else:
                 if answer == "Correct" or answer == "correct":
-                    correct = 1
                     print("I have found your number! It is " +
                           str(int(guess)) + "!")
+                    break
                 else:
                     print("Your input was invalid")
-    return guesses, count
+    return guesses
 
 
-def display_results(guesses, count):
-    output_count = 0
-    for output_count in range(0, count, 1):
+def display_results(guesses):
+    for output_count in range(len(guesses)):
         print("Guess # " + str((output_count + 1)) +
               " was " + str(int(guesses[output_count])) + ".")
 
 
 def main():
-    directions()
-    guesses, count = loop()
-    display_results(guesses, count)
+    display_directions()
+    guesses = play_game()
+    display_results(guesses)
 
 
 main()
