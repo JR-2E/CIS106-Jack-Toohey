@@ -52,3 +52,7 @@ They can also be used to sort information, like I did in the Activity 1 highest/
 ## Assignment 12
 
 In this assignment, I used dynamic arrays. There was not much programming to be done from scratch, because the activities for this week were based around programs from previous weeks. Dynamic arrays seem very useful. The only reason I would think you would need static arrays is for when you only need a specific amount of inputs, or you do not want to rely on the user to end the process of adding to the array.
+
+## Assignment 13
+
+In this assignment, I used functions to create new strings from ones given by the user. This seems very useful because, unlike integers or float-point values, strings are usually not going to be used in the code in the same format as the user entered them. There is nothing like this in any of the machine programming I do at work, because strings are not used. 
