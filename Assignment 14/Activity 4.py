@@ -1,5 +1,6 @@
 import os
 
+
 def get_info():
     print("Enter your first name, last name, street address, city," +
           "state/province/region, and postal code, separated by commas.")
@@ -8,8 +9,9 @@ def get_info():
 
 
 def get_split_info(info):
+    info = info.replace(" ", "")
     info = ' '.join(info.split())
-    split_info = info.split(", ")
+    split_info = info.split(",")
     return split_info
 
 
@@ -22,7 +24,7 @@ def create_file(split_info, address):
     file.close()
 
 
-def append_file(address):    
+def append_file(address):
     info = get_info()
     split_info = get_split_info(info)
     file = open(address, "a")
@@ -31,8 +33,8 @@ def append_file(address):
     file.write(split_info[3] + ", " + split_info[4] + " " + split_info[5])
     file.write("\n" + "\n")
     file.close()
-    
-    
+
+
 def read_file(address):
     file = open(address, "r")
     for line in file:
@@ -40,7 +42,7 @@ def read_file(address):
         print(line)
     file.close()
     print("")
-    
+
 
 def main():
     address = "~addresses.txt"
@@ -53,5 +55,5 @@ def main():
         append_file(address)
         read_file(address)
 
-        
+
 main()
