@@ -56,3 +56,7 @@ In this assignment, I used dynamic arrays. There was not much programming to be 
 ## Assignment 13
 
 In this assignment, I used functions to create new strings from ones given by the user. This seems very useful because, unlike integers or float-point values, strings are usually not going to be used in the code in the same format as the user entered them. There is nothing like this in any of the machine programming I do at work, because strings are not used. 
+
+## Assignment 14
+
+In this assignment, I started creating, writing in, and reading from files in a program. This allows our program to use data stored elsewhere, instead of getting all of the info for the program from within the program itself. This is very useful for when you have info stored somewhere for the program, or if you need to select a specific group of saved info, based on input from the user. I have done a somewhat similar thing with Excel at work, where I have created a Excel spreadsheet that enters the price of an item when the part number is entered into a cell.
