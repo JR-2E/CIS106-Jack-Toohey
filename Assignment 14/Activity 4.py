@@ -2,15 +2,6 @@
 # and outputs the addresses in a certain format.
 
 
-def read_file(address):
-    file = open(address, "r")
-    for line in file:
-        line = line.strip()
-        print(line)
-    file.close()
-    print("")
-
-
 def get_file_len(addresses):
     with open(addresses) as f:
         for file_len, l in enumerate(f):
