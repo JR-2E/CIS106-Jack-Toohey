@@ -10,21 +10,17 @@ def get_file_len(addresses):
     return file_len
 
 
-def check_len(addresses, file_len):
+def output_results(addresses, file_len, lines):
     if file_len % 4:
         with open('~addresses.txt', 'r') as f:
             flat_list = [word for line in f for word in line.split()]
-            for x in range(0, (file_len), 8):
-                print(flat_list[x + 1] + ", " + flat_list[x] + ", " +
-                      flat_list[x + 2] + " " + flat_list[x + 3] + " " +
-                      flat_list[x + 4] + ", " + flat_list[x + 5] + " " +
-                      flat_list[x + 6] + ", " + flat_list[x + 7])
-            print(flat_list[file_len * 2 - 5] + ", " +
-                  flat_list[file_len * 2 - 6] + ", " +
-                  flat_list[file_len * 2 - 4] + " " +
-                  flat_list[file_len * 2 - 3] + " " +
-                  flat_list[file_len * 2 - 2] + ", " +
-                  flat_list[file_len * 2 - 1] + flat_list[file_len * 2 + 1])
+            print(flat_list[1] + ", " + flat_list[0] + ", " +
+                  f"{lines[1].strip()}" + ", " + f"{lines[2].strip()}")
+            for x in range(4, (file_len), 4):
+                line = lines[x].split(" ")
+                print(line[1].strip() + ", " + line[0].strip() +
+                      ", " + f"{lines[x + 1].strip()}" + ", " +
+                      f"{lines[x + 2].strip()}")
     else:
         print("File line count is incorrect for format. " +
               "Make sure there is no more than one" +
@@ -34,9 +30,8 @@ def check_len(addresses, file_len):
 def main():
     addresses = "~addresses.txt"
     file_len = get_file_len(addresses)
-    check_len(addresses, file_len)
+    output_results(addresses, file_len, lines)
 
 f = open('~addresses.txt')
 lines = f.readlines()
 main()
-
