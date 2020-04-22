@@ -1,0 +1,27 @@
+John Smith
+24 Example Ct
+Schaumburg, IL 60197
+
+Ferris Bueller
+64 Movie St
+Hollywood, CA 30564
+
+Jack Toohey
+5873 Michigan Ave
+Chicago, ST 60193
+
+Joseph Goebb
+456 Doctor Pepper Street
+Hoffman Estates, IL 60195
+
+Mark Kalamari
+489 Pizza Hut Street
+Des Plaines, IL 60495
+
+Aristocles Ariston
+123 A Very Long Street
+Athens, GR 43597
+
+Frederick Nietzche
+534 A Very Short Street
+Munich, DE 16437
