@@ -28,10 +28,10 @@ def output_results(addresses, file_len, lines):
 
 
 def main():
+    f = open('~addresses.txt')
+    lines = f.readlines()
     addresses = "~addresses.txt"
     file_len = get_file_len(addresses)
     output_results(addresses, file_len, lines)
 
-f = open('~addresses.txt')
-lines = f.readlines()
 main()
