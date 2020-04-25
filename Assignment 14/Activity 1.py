@@ -2,19 +2,19 @@
 # then finds the lowest, highest, and average score.
 
 
-def get_file_len(scores):
-    with open(scores) as f:
-        for file_len, l in enumerate(f):
-            pass
-    file_len = file_len + 1
-    return file_len
+def get_lines(filename):
+    file = open(filename)
+    lines = file.readlines()
+    return lines
 
 
-def create_array(scores, file_len, lines, f, scores_array):
-    with open('~scores.txt', 'r') as f:
-        for x in range(0, file_len):
-            line = lines[x].split(",")
-            scores_array.append(int(line[1]))
+def create_array(filename):
+    scores_array = []
+    lines = get_lines(filename)
+    for x in range(1, len(lines)):
+        line = lines[x].split(",")
+        scores_array.append(int(line[1]))
+    return scores_array
 
 
 def get_average(scores_array):
@@ -39,18 +39,14 @@ def get_high(scores_array):
 
 
 def display_results(average, low, high):
-    print("The lowest score is " + low + ".")
-    print("The highest score is " + high + ".")
-    print("The average of the scores is " + "{:12.2f}".format(average) + ".")
+    print(f"The lowest score is {low}.")
+    print(f"The highest score is {high}.")
+    print(f"The average of the scores is {average:.2f}.")
 
 
 def main():
-    scores_array = []
-    f = open('~scores.txt')
-    lines = f.readlines()
-    scores = "~scores.txt"
-    file_len = get_file_len(scores)
-    create_array(scores, file_len, lines, f, scores_array)
+    filename = "scores.txt"
+    scores_array = create_array(filename)
     average = get_average(scores_array)
     low = get_low(scores_array)
     high = get_high(scores_array)
