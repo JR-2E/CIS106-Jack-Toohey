@@ -1,3 +1,6 @@
+# This program opens a text file saved with a certain format,
+# then finds the lowest, highest, and average score.
+
 
 def get_file_len(scores):
     with open(scores) as f:
@@ -12,7 +15,7 @@ def create_array(scores, file_len, lines, f, scores_array):
         for x in range(0, file_len):
             line = lines[x].split(",")
             scores_array.append(int(line[1]))
-        
+
 
 def get_average(scores_array):
     total = 0
@@ -21,7 +24,7 @@ def get_average(scores_array):
         total = total + int(score)
     average = total / len(scores_array)
     return average
-    
+
 
 def get_low(scores_array):
     scores_array.sort()
@@ -30,7 +33,7 @@ def get_low(scores_array):
 
 
 def get_high(scores_array):
-    scores_array.sort(reverse = True)
+    scores_array.sort(reverse=True)
     high = str(scores_array[0])
     return high
 
@@ -52,6 +55,6 @@ def main():
     low = get_low(scores_array)
     high = get_high(scores_array)
     display_results(average, low, high)
-    
-    
+
+
 main()
