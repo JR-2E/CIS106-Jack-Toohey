@@ -19,10 +19,20 @@
 
 
 
-
+# I figured out a way to read certain parts of the xml from this link-
+# https://stackabuse.com/reading-and-writing-xml-files-in-python/
 
 
 def main():
+    x = 0
+    from xml.dom import minidom
+    xmldoc = minidom.parse("cd_catalog.xml")
+    catalog = xmldoc.getElementsByTagName("CATALOG")[x]
+    cd = xmldoc.getElementsByTagName("CD")
+    for x in range(0, 25):
+        title = xmldoc.getElementsByTagName("TITLE")[x].firstChild.data
+        print(title)
+    
 
 
 main()
