@@ -21,6 +21,7 @@
 
 # I figured out a way to read certain parts of the xml from this link-
 # https://stackabuse.com/reading-and-writing-xml-files-in-python/
+# (the following is a test, which prints the title of each CD)
 
 
 def main():
