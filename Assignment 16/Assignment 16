@@ -1,1 +1,28 @@
+# This file pulls from the CD Catalog, 
+# makes arrays for the items in the catalog, 
+# and then displays the information to the user
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def main():
+
+
+main()
