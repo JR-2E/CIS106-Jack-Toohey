@@ -3,37 +3,21 @@
 # and then displays the information to the user
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# I figured out a way to read certain parts of the xml from this link-
-# https://stackabuse.com/reading-and-writing-xml-files-in-python/
-# (the following is a test, which prints the title of each CD)
+def display_results(xmldoc):
+    for x in range(0, 26):
+        title = xmldoc.getElementsByTagName("TITLE")[x].firstChild.data
+        artist = xmldoc.getElementsByTagName("ARTIST")[x].firstChild.data
+        country = xmldoc.getElementsByTagName("COUNTRY")[x].firstChild.data
+        price = xmldoc.getElementsByTagName("PRICE")[x].firstChild.data
+        year = xmldoc.getElementsByTagName("YEAR")[x].firstChild.data
+        print(title + " - " + artist + " - " + country + " - " + price + " - " + year)
 
 
 def main():
-    x = 0
     from xml.dom import minidom
     xmldoc = minidom.parse("cd_catalog.xml")
-    catalog = xmldoc.getElementsByTagName("CATALOG")[x]
-    cd = xmldoc.getElementsByTagName("CD")
-    for x in range(0, 25):
-        title = xmldoc.getElementsByTagName("TITLE")[x].firstChild.data
-        print(title)
-    
+    display_results(xmldoc)
+
 
 
 main()
