@@ -85,9 +85,10 @@ def create_arrays(array_count):
         return years_array
     else:
         print("something went wrong")
-    
-    
-def edit_arrays(xmldoc, a, titles_array, artists_array, countries_array, prices_array, years_array):
+
+
+def edit_arrays(xmldoc, a, titles_array, artists_array,
+                countries_array, prices_array, years_array):
     for x in range(0, a):
         title = xmldoc.getElementsByTagName("TITLE")[x].firstChild.data
         titles_array.append(title)
@@ -99,12 +100,14 @@ def edit_arrays(xmldoc, a, titles_array, artists_array, countries_array, prices_
         prices_array.append(price)
         year = xmldoc.getElementsByTagName("YEAR")[x].firstChild.data
         years_array.append(year)
-    
-        
-def display_results(xmldoc, a, titles_array, artists_array, countries_array, prices_array, years_array):
+
+
+def display_results(xmldoc, a, titles_array, artists_array,
+                    countries_array, prices_array, years_array):
     for x in range(0, a):
-        print(titles_array[x] + " - " + artists_array[x] + " - " + countries_array[x] +
-              " - " + prices_array[x] + " - " + years_array[x])
+        print(titles_array[x] + " - " + artists_array[x] + " - " +
+              countries_array[x] + " - " + prices_array[x] + " - " +
+              years_array[x])
 
 
 def main():
@@ -112,7 +115,7 @@ def main():
     from xml.dom import minidom
     xmldoc = minidom.parse("cd_catalog.xml")
     a = check_amounts(xmldoc)
-    for array_count in range(0,5):
+    for array_count in range(0, 5):
         if(array_count == 0):
             titles_array = create_arrays(array_count)
         elif(array_count == 1):
@@ -125,11 +128,10 @@ def main():
             years_array = create_arrays(array_count)
         else:
             print("something went wrong")
-        
-        
-        
-    edit_arrays(xmldoc, a, titles_array, artists_array, countries_array, prices_array, years_array)
-    display_results(xmldoc, a, titles_array, artists_array, countries_array, prices_array, years_array)
+    edit_arrays(xmldoc, a, titles_array, artists_array,
+                countries_array, prices_array, years_array)
+    display_results(xmldoc, a, titles_array, artists_array,
+                    countries_array, prices_array, years_array)
 
 
 main()
