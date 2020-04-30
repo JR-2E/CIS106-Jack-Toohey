@@ -100,14 +100,24 @@ def edit_arrays(xmldoc, a, titles_array, artists_array,
         prices_array.append(price)
         year = xmldoc.getElementsByTagName("YEAR")[x].firstChild.data
         years_array.append(year)
+        
+        
+def get_average_price(prices_array):
+    total = 0
+    for count in range(0, len(prices_array)):
+        total = total + float(prices_array[count])
+    average_price = str(total / len(prices_array))
+    return average_price
 
 
 def display_results(xmldoc, a, titles_array, artists_array,
-                    countries_array, prices_array, years_array):
+                    countries_array, prices_array,
+                    years_array, average_price):
     for x in range(0, a):
         print(titles_array[x] + " - " + artists_array[x] + " - " +
               countries_array[x] + " - " + prices_array[x] + " - " +
               years_array[x])
+    print("The average price is $" + average_price + ".")
 
 
 def main():
@@ -130,8 +140,10 @@ def main():
             print("something went wrong")
     edit_arrays(xmldoc, a, titles_array, artists_array,
                 countries_array, prices_array, years_array)
+    average_price = get_average_price(prices_array)
     display_results(xmldoc, a, titles_array, artists_array,
-                    countries_array, prices_array, years_array)
+                    countries_array, prices_array,
+                    years_array, average_price)
 
 
 main()
