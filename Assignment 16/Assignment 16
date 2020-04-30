@@ -106,7 +106,8 @@ def get_average_price(prices_array):
     total = 0
     for count in range(0, len(prices_array)):
         total = total + float(prices_array[count])
-    average_price = str(total / len(prices_array))
+    average_price = round((total / len(prices_array)), 2)
+    average_price = str(average_price)
     return average_price
 
 
