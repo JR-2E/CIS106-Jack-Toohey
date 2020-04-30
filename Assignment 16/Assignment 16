@@ -2,26 +2,13 @@
 # makes arrays for the items in the catalog, 
 # and then displays the information to the user
 
-
-
-def display_results(xmldoc):
-    for x in range(0, 26):
-        title = xmldoc.getElementsByTagName("TITLE")[x].firstChild.data
-        artist = xmldoc.getElementsByTagName("ARTIST")[x].firstChild.data
-        country = xmldoc.getElementsByTagName("COUNTRY")[x].firstChild.data
-        price = xmldoc.getElementsByTagName("PRICE")[x].firstChild.data
-        year = xmldoc.getElementsByTagName("YEAR")[x].firstChild.data
-        print(title + " - " + artist + " - " + country + " - " + price + " - " + year)
-        count = title.count('')
-        print(count)
-
-
-
-def main():
-    from xml.dom import minidom
-    xmldoc = minidom.parse("cd_catalog.xml")
-    display_results(xmldoc)
-
+def check_amounts(xmldoc):
+    a = 0
+    b = 0
+    c = 0
+    d = 0
+    e = 0
+    f = 0
     g = open('cd_catalog.xml')
     lines = g.readlines()
     cd_catalog = "cd_catalog.xml"
@@ -32,5 +19,70 @@ def main():
             for i in words:
                 if(word in i):
                     a=a+1
-                    
+    cd_amount = a
+    word = str("<TITLE>")
+    with open(cd_catalog, 'r') as g:
+        for line in g:
+            words = line.split()
+            for i in words:
+                if(word in i):
+                    b=b+1
+    title_amount = b
+    word = str("<ARTIST>")
+    with open(cd_catalog, 'r') as g:
+        for line in g:
+            words = line.split()
+            for i in words:
+                if(word in i):
+                    c=c+1
+    artist_amount = c
+    word = str("<COUNTRY>")
+    with open(cd_catalog, 'r') as g:
+        for line in g:
+            words = line.split()
+            for i in words:
+                if(word in i):
+                    d=d+1
+    country_amount = d
+    word = str("<PRICE>")
+    with open(cd_catalog, 'r') as g:
+        for line in g:
+            words = line.split()
+            for i in words:
+                if(word in i):
+                    e=e+1
+    prices_amount = e
+    word = str("<YEAR>")
+    with open(cd_catalog, 'r') as g:
+        for line in g:
+            words = line.split()
+            for i in words:
+                if(word in i):
+                    f=f+1
+    year_amount = f
+    if(a == b == c == d == e == f):
+        print("Count check works")
+    else:
+         print("There is information missing from the catalog.")
+    
+
+def display_results(xmldoc):
+    for x in range(0, 26):
+        title = xmldoc.getElementsByTagName("TITLE")[x].firstChild.data
+        artist = xmldoc.getElementsByTagName("ARTIST")[x].firstChild.data
+        country = xmldoc.getElementsByTagName("COUNTRY")[x].firstChild.data
+        price = xmldoc.getElementsByTagName("PRICE")[x].firstChild.data
+        year = xmldoc.getElementsByTagName("YEAR")[x].firstChild.data
+        print(title + " - " + artist + " - " + country + " - " + price + " - " + year)
+        
+
+def main():
+    from xml.dom import minidom
+    xmldoc = minidom.parse("cd_catalog.xml")
+    display_results(xmldoc)
+    check_amounts(xmldoc)
+    
+    
+
+
 main()
