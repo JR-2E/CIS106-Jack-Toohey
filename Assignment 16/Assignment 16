@@ -114,11 +114,14 @@ def get_average_price(prices_array):
 def display_results(xmldoc, a, titles_array, artists_array,
                     countries_array, prices_array,
                     years_array, average_price):
-    for x in range(0, a):
+    results_count = a
+    a = str(a)
+    for x in range(0, results_count):
         print(titles_array[x] + " - " + artists_array[x] + " - " +
               countries_array[x] + " - " + prices_array[x] + " - " +
               years_array[x])
-    print("The average price is $" + average_price + ".")
+    print("There are " + a + " CDs in the catalog. " +
+          "The average price is $" + average_price + ".")
 
 
 def main():
