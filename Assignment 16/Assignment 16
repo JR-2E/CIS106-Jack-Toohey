@@ -61,13 +61,14 @@ def check_amounts(xmldoc):
                     f=f+1
     year_amount = f
     if(a == b == c == d == e == f):
-        print("Count check works")
+        display_results(xmldoc, a)
+        return a
     else:
          print("There is information missing from the catalog.")
     
 
-def display_results(xmldoc):
-    for x in range(0, 26):
+def display_results(xmldoc, a):
+    for x in range(0, a):
         title = xmldoc.getElementsByTagName("TITLE")[x].firstChild.data
         artist = xmldoc.getElementsByTagName("ARTIST")[x].firstChild.data
         country = xmldoc.getElementsByTagName("COUNTRY")[x].firstChild.data
@@ -79,9 +80,7 @@ def display_results(xmldoc):
 def main():
     from xml.dom import minidom
     xmldoc = minidom.parse("cd_catalog.xml")
-    display_results(xmldoc)
-    check_amounts(xmldoc)
-    
+    a = check_amounts(xmldoc)
     
 
 
