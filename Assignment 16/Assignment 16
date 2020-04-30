@@ -62,18 +62,32 @@ def check_amounts(xmldoc):
                     f = f + 1
     year_amount = f
     if(a == b == c == d == e == f):
-        display_results(xmldoc, a)
         return a
     else:
         print("There is information missing from the catalog.")
 
 
-def display_results(xmldoc, a):
-    titles_array = []
-    artists_array = []
-    countries_array = []
-    prices_array = []
-    years_array = []
+def create_arrays(array_count):
+    if(array_count == 0):
+        titles_array = []
+        return titles_array
+    elif(array_count == 1):
+        artists_array = []
+        return artists_array
+    elif(array_count == 2):
+        countries_array = []
+        return countries_array
+    elif(array_count == 3):
+        prices_array = []
+        return prices_array
+    elif(array_count == 4):
+        years_array = []
+        return years_array
+    else:
+        print("something went wrong")
+    
+    
+def edit_arrays(xmldoc, a, titles_array, artists_array, countries_array, prices_array, years_array):
     for x in range(0, a):
         title = xmldoc.getElementsByTagName("TITLE")[x].firstChild.data
         titles_array.append(title)
@@ -84,16 +98,38 @@ def display_results(xmldoc, a):
         price = xmldoc.getElementsByTagName("PRICE")[x].firstChild.data
         prices_array.append(price)
         year = xmldoc.getElementsByTagName("YEAR")[x].firstChild.data
-        years_array.append(title)
+        years_array.append(year)
+    
+        
+def display_results(xmldoc, a, titles_array, artists_array, countries_array, prices_array, years_array):
     for x in range(0, a):
         print(titles_array[x] + " - " + artists_array[x] + " - " + countries_array[x] +
               " - " + prices_array[x] + " - " + years_array[x])
 
 
 def main():
+    array_count = 0
     from xml.dom import minidom
     xmldoc = minidom.parse("cd_catalog.xml")
     a = check_amounts(xmldoc)
+    for array_count in range(0,5):
+        if(array_count == 0):
+            titles_array = create_arrays(array_count)
+        elif(array_count == 1):
+            artists_array = create_arrays(array_count)
+        elif(array_count == 2):
+            countries_array = create_arrays(array_count)
+        elif(array_count == 3):
+            prices_array = create_arrays(array_count)
+        elif(array_count == 4):
+            years_array = create_arrays(array_count)
+        else:
+            print("something went wrong")
+        
+        
+        
+    edit_arrays(xmldoc, a, titles_array, artists_array, countries_array, prices_array, years_array)
+    display_results(xmldoc, a, titles_array, artists_array, countries_array, prices_array, years_array)
 
 
 main()
