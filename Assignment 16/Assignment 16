@@ -100,8 +100,8 @@ def edit_arrays(xmldoc, a, titles_array, artists_array,
         prices_array.append(price)
         year = xmldoc.getElementsByTagName("YEAR")[x].firstChild.data
         years_array.append(year)
-        
-        
+
+
 def get_average_price(prices_array):
     total = 0
     for count in range(0, len(prices_array)):
