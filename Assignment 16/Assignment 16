@@ -22,3 +22,15 @@ def main():
     xmldoc = minidom.parse("cd_catalog.xml")
     display_results(xmldoc)
 
+    g = open('cd_catalog.xml')
+    lines = g.readlines()
+    cd_catalog = "cd_catalog.xml"
+    word = str("<CD>")
+    with open(cd_catalog, 'r') as g:
+        for line in g:
+            words = line.split()
+            for i in words:
+                if(word in i):
+                    a=a+1
+                    
+main()
