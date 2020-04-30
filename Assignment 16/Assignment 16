@@ -4,12 +4,12 @@
 
 
 def check_amounts(xmldoc):
-    a = 0
-    b = 0
-    c = 0
-    d = 0
-    e = 0
-    f = 0
+    a = int(0)
+    b = int(0)
+    c = int(0)
+    d = int(0)
+    e = int(0)
+    f = int(0)
     g = open('cd_catalog.xml')
     lines = g.readlines()
     cd_catalog = "cd_catalog.xml"
@@ -69,14 +69,25 @@ def check_amounts(xmldoc):
 
 
 def display_results(xmldoc, a):
+    titles_array = []
+    artists_array = []
+    countries_array = []
+    prices_array = []
+    years_array = []
     for x in range(0, a):
         title = xmldoc.getElementsByTagName("TITLE")[x].firstChild.data
+        titles_array.append(title)
         artist = xmldoc.getElementsByTagName("ARTIST")[x].firstChild.data
+        artists_array.append(artist)
         country = xmldoc.getElementsByTagName("COUNTRY")[x].firstChild.data
+        countries_array.append(country)
         price = xmldoc.getElementsByTagName("PRICE")[x].firstChild.data
+        prices_array.append(price)
         year = xmldoc.getElementsByTagName("YEAR")[x].firstChild.data
-        print(title + " - " + artist + " - " + country +
-              " - " + price + " - " + year)
+        years_array.append(title)
+    for x in range(0, a):
+        print(titles_array[x] + " - " + artists_array[x] + " - " + countries_array[x] +
+              " - " + prices_array[x] + " - " + years_array[x])
 
 
 def main():
