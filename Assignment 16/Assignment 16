@@ -3,13 +3,8 @@
 # and then displays the information to the user
 
 
-def check_amounts(xmldoc):
-    a = int(0)
-    b = int(0)
-    c = int(0)
-    d = int(0)
-    e = int(0)
-    f = int(0)
+def get_cd_amount(xml_doc):
+    cd_amount = int(0)
     g = open('cd_catalog.xml')
     lines = g.readlines()
     cd_catalog = "cd_catalog.xml"
@@ -19,87 +14,48 @@ def check_amounts(xmldoc):
             words = line.split()
             for i in words:
                 if(word in i):
-                    a = a + 1
-    cd_amount = a
-    word = str("<TITLE>")
-    with open(cd_catalog, 'r') as g:
-        for line in g:
-            words = line.split()
-            for i in words:
-                if(word in i):
-                    b = b + 1
-    title_amount = b
-    word = str("<ARTIST>")
-    with open(cd_catalog, 'r') as g:
-        for line in g:
-            words = line.split()
-            for i in words:
-                if(word in i):
-                    c = c + 1
-    artist_amount = c
-    word = str("<COUNTRY>")
-    with open(cd_catalog, 'r') as g:
-        for line in g:
-            words = line.split()
-            for i in words:
-                if(word in i):
-                    d = d + 1
-    country_amount = d
-    word = str("<PRICE>")
-    with open(cd_catalog, 'r') as g:
-        for line in g:
-            words = line.split()
-            for i in words:
-                if(word in i):
-                    e = e + 1
-    prices_amount = e
-    word = str("<YEAR>")
-    with open(cd_catalog, 'r') as g:
-        for line in g:
-            words = line.split()
-            for i in words:
-                if(word in i):
-                    f = f + 1
-    year_amount = f
-    if(a == b == c == d == e == f):
-        return a
-    else:
-        print("There is information missing from the catalog.")
+                    cd_amount = cd_amount + 1
+        return cd_amount
 
 
-def create_arrays(array_count):
+def build_arrays(array_count, cd_amount, xml_doc):
+    titles_array = []
+    artists_array = []
+    countries_array = []
+    prices_array = []
+    years_array = []
     if(array_count == 0):
         titles_array = []
+        for x in range(0, cd_amount):
+            title = xml_doc.getElementsByTagName("TITLE")[x].firstChild.data
+            titles_array.append(title)
         return titles_array
     elif(array_count == 1):
         artists_array = []
+        for x in range(0, cd_amount):
+            artist = xml_doc.getElementsByTagName("ARTIST")[x].firstChild.data
+            artists_array.append(artist)
         return artists_array
     elif(array_count == 2):
         countries_array = []
+        for x in range(0, cd_amount):
+            country = xml_doc.getElementsByTagName("COUNTRY")[x].firstChild.data
+            countries_array.append(country)
         return countries_array
     elif(array_count == 3):
         prices_array = []
+        for x in range(0, cd_amount):
+            price = xml_doc.getElementsByTagName("PRICE")[x].firstChild.data
+            prices_array.append(price)
         return prices_array
     elif(array_count == 4):
         years_array = []
+        for x in range(0, cd_amount):
+            year = xml_doc.getElementsByTagName("YEAR")[x].firstChild.data
+            years_array.append(year)
         return years_array
     else:
         print("something went wrong")
-
-
-def edit_arrays(xmldoc, a, titles_array, artists_array,
-                countries_array, prices_array, years_array):
-    for x in range(0, a):
-        title = xmldoc.getElementsByTagName("TITLE")[x].firstChild.data
-        titles_array.append(title)
-        artist = xmldoc.getElementsByTagName("ARTIST")[x].firstChild.data
-        artists_array.append(artist)
-        country = xmldoc.getElementsByTagName("COUNTRY")[x].firstChild.data
-        countries_array.append(country)
-        price = xmldoc.getElementsByTagName("PRICE")[x].firstChild.data
-        prices_array.append(price)
-        year = xmldoc.getElementsByTagName("YEAR")[x].firstChild.data
-        years_array.append(year)
 
 
 def get_average_price(prices_array):
@@ -111,43 +67,48 @@ def get_average_price(prices_array):
     return average_price
 
 
-def display_results(xmldoc, a, titles_array, artists_array,
+def display_results(xml_doc, cd_amount, titles_array, artists_array,
                     countries_array, prices_array,
                     years_array, average_price):
-    results_count = a
-    a = str(a)
+    results_count = cd_amount
+    cd_amount = str(cd_amount)
     for x in range(0, results_count):
         print(titles_array[x] + " - " + artists_array[x] + " - " +
               countries_array[x] + " - " + prices_array[x] + " - " +
               years_array[x])
-    print("There are " + a + " CDs in the catalog. " +
+    print("There are " + cd_amount + " CDs in the catalog. " +
           "The average price is $" + average_price + ".")
 
 
 def main():
     array_count = 0
     from xml.dom import minidom
-    xmldoc = minidom.parse("cd_catalog.xml")
-    a = check_amounts(xmldoc)
-    for array_count in range(0, 5):
-        if(array_count == 0):
-            titles_array = create_arrays(array_count)
-        elif(array_count == 1):
-            artists_array = create_arrays(array_count)
-        elif(array_count == 2):
-            countries_array = create_arrays(array_count)
-        elif(array_count == 3):
-            prices_array = create_arrays(array_count)
-        elif(array_count == 4):
-            years_array = create_arrays(array_count)
-        else:
-            print("something went wrong")
-    edit_arrays(xmldoc, a, titles_array, artists_array,
-                countries_array, prices_array, years_array)
-    average_price = get_average_price(prices_array)
-    display_results(xmldoc, a, titles_array, artists_array,
-                    countries_array, prices_array,
-                    years_array, average_price)
+    xml_doc = minidom.parse("cd_catalog.xml")
+    cd_amount = get_cd_amount(xml_doc)
+    try:
+        for array_count in range(0, 5):
+            if(array_count == 0):
+                titles_array = build_arrays(array_count,
+                                            cd_amount, xml_doc)
+            elif(array_count == 1):
+                artists_array = build_arrays(array_count,
+                                             cd_amount, xml_doc)
+            elif(array_count == 2):
+                countries_array = build_arrays(array_count,
+                                               cd_amount, xml_doc)
+            elif(array_count == 3):
+                prices_array = build_arrays(array_count,
+                                            cd_amount, xml_doc)
+            elif(array_count == 4):
+                years_array = build_arrays(array_count,
+                                           cd_amount, xml_doc)
+        average_price = get_average_price(prices_array)
+        display_results(xml_doc, cd_amount, titles_array,
+                        artists_array, countries_array,
+                        prices_array, years_array, average_price)
+    except:
+        print("Something went wrong - " +
+              "Information may be missing from file.")
 
 
 main()
